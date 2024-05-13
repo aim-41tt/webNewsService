@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random News</title>
+    <style>
+        <link rel="stylesheet" href="/css/styles.css">
+    </style>
+</head>
+<body>
+    <h1>Random News</h1>
+    <div class="news-container">
+        <!-- Отображение случайной новости -->
+        <div class="news-item">
+            <h2 th:text="${news.title}"></h2>
+            <p th:text="${news.description}"></p>
+            <img th:src="${news.url_imag}" alt="News Image">
+            <p th:text="${news.contentNews.content}"></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic News</title>
+    <link rel="stylesheet" href="/css/id_news_styles.css">
+</head>
+<body>
+    <h1>Topic News</h1>
+	<div class="news-container">
+       
+        <div class="news-item">
+            <h2 th:text="${news.title}"></h2>
+            <p th:text="${news.description}"></p>
+            <img th:src="${news.url_imag}" alt="News Image">
+            <p th:text="${news.contentNews.content}"></p>
+        </div>
+    </div>
+</body>
+</html>

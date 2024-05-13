@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All News</title>
+   <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1 style="color: #007bff;">All News</h1>
+    <div class="news-container">
+       
+        <div th:each="news, iterStat : ${news}" class="news-item"
+             th:classappend="${iterStat.index % 4 == 0}? 'first-in-row'">
+			  <a th:href="@{'/news/' + ${news.id}}">
+            <h2 th:text="${news.title}"></h2>
+            <p th:text="${news.description}"></p>
+            <img th:src="${news.url_imag}" alt="News Image">
+        </div>
+    </div>
+</body>
+</html>
